@@ -25,9 +25,15 @@ b = list(filter(lambda x: x.startswith('B'), students))
 j = list(filter(lambda x: x.startswith('J'), students))
 k = list(filter(lambda x: x.startswith('K'), students))
 s = list(filter(lambda x: x.startswith('S'), students))
-print(students)
+
 print('Average grade of ', a[0], ' is ', str(avg_a))
 print('Average grade of ', b[0], ' is ', str(avg_b))
 print('Average grade of ', j[0], ' is ', str(avg_j))
 print('Average grade of ', k[0], ' is ', str(avg_k))
 print('Average grade of ', s[0], ' is ', str(avg_s))
+
+grades_list = [avg_a,  avg_b, avg_j, avg_k, avg_s]
+print(grades_list)
+print(students)
+students_book=dict(zip(students, grades_list))
+print(students_book)
