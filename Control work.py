@@ -11,7 +11,7 @@ grades_s = grades[4]
 avg_a = sum(grades_a)/len(grades_a)
 avg_b = sum(grades_b)/len(grades_b)
 avg_j = sum(grades_j)/len(grades_j)
-avg_k = sum(grades_k)/len(grades_s)
+avg_k = sum(grades_k)/len(grades_k)
 avg_s = sum(grades_s)/len(grades_s)
 print(grades_a)
 print(grades_b)
