@@ -5,6 +5,10 @@ print(my_dict.get('Kilimangaro', ' Not available'))
 my_dict.update({'Broad Peak': 8051})
 print(my_dict)
 del my_dict['K2']
+
+print(my_dict)
+a=my_dict.pop('Manaslu')
+print(a)
 print(my_dict)
 
 my_set = {1, 1, 2, 3, 5, 'line'}
