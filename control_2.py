@@ -41,8 +41,10 @@ password_list = []
 
 for p in control_number2:
     for q in control_list:
-        if q - p > 2 and p != q-p:
+        if q - p > 1 and p < q - p:
             password_list.append((p, q - p))
+
+
 
 print("Случайное число:", choice)
 print("Контрольная последовательность: ", *password_list)
