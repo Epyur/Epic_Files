@@ -41,7 +41,7 @@ password_list = []
 
 for p in control_number2:
     for q in control_list:
-        if q - p > 1 and p < q - p:
+        if p < q - p:
             password_list.append((p, q - p))
 
 
