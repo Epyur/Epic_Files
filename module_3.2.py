@@ -13,10 +13,12 @@ def send_email(recepient, message, sender = 'university.help@gmail.com'):
                         print('Нельзя отправить письмо самому себе!')
                     elif sender == 'university.help@gmail.com':
                         print('Письмо успешно отправлено с адреса ', sender, 'на адрес', recepient)
+                    else:
+                        print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса ', sender, 'на адрес ', recepient)
                 else:
-                    print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса ', sender, 'на адрес ', recepient)
+                    print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recepient)
             else:
-                print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса ', sender, 'на адрес ', recepient)
+                print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recepient)
         else:
             print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recepient)
     else:
@@ -24,4 +26,4 @@ def send_email(recepient, message, sender = 'university.help@gmail.com'):
 
 
 
-send_email('university.help@gmail.net', 'text')
+send_email('epyur@ya.by', 'text')
