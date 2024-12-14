@@ -2,28 +2,16 @@ import re
 
 def send_email(recepient, message, sender = 'university.help@gmail.com'):
     dog = "@"
-    domen_1 = '.ru'
-    domen_2 = '.com'
-    domen_3 = '.net'
-    if dog in recepient:
-        if dog in sender:
-            if domen_1 in recepient or domen_2 in recepient or domen_3 in recepient:
-                if domen_1 in sender or domen_2 in sender or domen_3 in sender:
-                    if recepient == sender:
-                        print('Нельзя отправить письмо самому себе!')
-                    elif sender == 'university.help@gmail.com':
-                        print('Письмо успешно отправлено с адреса ', sender, 'на адрес', recepient)
-                    else:
-                        print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса ', sender, 'на адрес ', recepient)
-                else:
-                    print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recepient)
-            else:
-                print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recepient)
-        else:
-            print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recepient)
-    else:
+    if not dog in sender or not dog in recepient or not sender.endswith(('.com', '.ru', '.net'))  or not recepient.endswith(('.com', '.ru', '.net')):
         print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recepient)
+        return
+    if recepient == sender:
+        print('Нельзя отправить письмо самому себе!')
+        return
+    if sender != 'university.help@gmail.com':
+        print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса ', sender, 'на адрес ', recepient)
+        return
 
+    print('Письмо успешно отправлено с адреса ', sender, 'на адрес', recepient)
 
-
-send_email('epyur@ya.by', 'text')
+send_email('epyur@ya.ru', 'text')
